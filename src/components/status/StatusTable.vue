@@ -91,6 +91,7 @@ export default {
             }
 
             const srvs = generic.getValue('Available_Services') || ''
+            window.localStorage.setItem(res.serverIdentity.description, cities[i])
 
             return {
               status: 'up',

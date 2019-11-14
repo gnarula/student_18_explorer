@@ -24,7 +24,7 @@ export default {
         list: this.roster.list.map(({ id, signature, description, address, url }) => ({
           id: bytes2Hex(id),
           signature: signature,
-          description: description,
+          description: window.localStorage.getItem(description),
           address: address,
           url: url
         }))
