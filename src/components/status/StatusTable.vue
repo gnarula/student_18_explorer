@@ -59,6 +59,7 @@ export default {
     Name
   },
   data: function () {
+    let cities = ['Singapore', 'Tokyo', 'Zurich', 'New York', 'London', 'Shanghai', 'Mumbai']
     return {
       maxNumServer: 0,
       items: [],
@@ -94,7 +95,7 @@ export default {
             return {
               status: 'up',
               lastUpdate: Date.now(),
-              name: res.serverIdentity.description,
+              name: cities[i], //res.serverIdentity.description,
               version: conode.getValue('version'),
               host: generic.getValue('Host'),
               port: generic.getValue('Port'),
